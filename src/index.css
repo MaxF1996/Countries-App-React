@@ -1,9 +1,12 @@
 body.light {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  body.dark {
-    background-color: #333333;
-    color: #ffffff;
-  }
+  --main-bg: #f9f9f9;
+  --elements-bg: #ffffff;
+  --font-color: #111517;
+  --input-color: #848484;
+}
+body.dark {
+  --main-bg: #202c36;
+  --elements-bg: #2b3845;
+  --font-color: #ffffff;
+  --input-color: #ffffff;
+}

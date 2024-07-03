@@ -1,25 +1,18 @@
-:root {
-  --main-bg: #f9f9f9;
-  --elements-bg: #ffffff;
-  --font-color: #111517;
-  --input-color: #848484;
-  --font-size: 14px;
-  --line-height: 1.3;
+html {
+  font-family: "Nunito Sans", Arial, sans-serif;
 }
-.light-theme {
+
+body.light {
   --main-bg: #f9f9f9;
   --elements-bg: #ffffff;
   --font-color: #111517;
   --input-color: #848484;
 }
-.dark-theme {
+body.dark {
   --main-bg: #202c36;
   --elements-bg: #2b3845;
   --font-color: #ffffff;
   --input-color: #ffffff;
-}
-html {
-  font-family: "Nunito Sans", Arial, sans-serif;
 }
 
 body {
