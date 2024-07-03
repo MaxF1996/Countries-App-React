@@ -13,9 +13,9 @@ function AppContent() {
   }, [theme]);
 
   return (
-    <div className="App">
+    <main className="App">
       <Header />
-    </div>
+    </main>
   );
 }
 
