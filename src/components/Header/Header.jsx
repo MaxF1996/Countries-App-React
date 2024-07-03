@@ -1,16 +1,14 @@
-import classes from "./Header.module.css";
-import { FaMoon } from "react-icons/fa6";
+import classes from "./Header.module.css"
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 export default function Header() {
   return (
-    <header className="header">
-      <div className="header__conatiner">
-        <a href="#" className="header__logo">
-          Where in the world?
+    <header className={classes.Header}>
+      <div className={classes.Header__Container}>
+        <a href="#" className={classes.Header__Logo}>
+          Where in the world ?
         </a>
-        <button type="button" className="header__theme-switcher">
-          <FaMoon /> Dark Mode
-        </button>
+        <ThemeSwitcher/>
       </div>
     </header>
   );
