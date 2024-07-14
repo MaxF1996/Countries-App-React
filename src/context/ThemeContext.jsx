@@ -5,9 +5,9 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'light';
-  });
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = localStorage.getItem('theme') || (prefersDarkMode ? 'dark' : 'light');
+  const [theme, setTheme] = useState(initialTheme);
 
   const switchTheme = () => {
     setTheme((prevTheme) => {

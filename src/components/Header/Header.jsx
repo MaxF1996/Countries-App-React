@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className={classes.Header}>
       <div className={classes.Header__Container}>
-        <a href="#" className={classes.Header__Logo}>
+        <a href="../../../index.html" className={classes.Header__Logo}>
           Where in the world ?
         </a>
         <ThemeSwitcher/>
