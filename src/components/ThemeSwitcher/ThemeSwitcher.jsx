@@ -1,12 +1,12 @@
 import { useTheme } from "../../context/ThemeContext";
 import classes from "./ThemeSwitcher.module.css";
-import { FaMoon } from "react-icons/fa6";
+import { FaMoon, FaSun } from "react-icons/fa6";
 
 
 
 export default function ThemeSwitcher() {
  
-        const {switchTheme} = useTheme();
+        const {theme, switchTheme} = useTheme();
 
   return (
     <button
@@ -14,7 +14,7 @@ export default function ThemeSwitcher() {
       className={classes.ThemeSwitcher}
       onClick={switchTheme}
     >
-      <FaMoon className={classes.ThemeSwitcher__Icon} />
+      {theme === "light" ? <FaMoon className={classes.ThemeSwitcher__Icon} /> : <FaSun className={classes.ThemeSwitcher__Icon} />}
       Switch Mode
     </button>
   );
