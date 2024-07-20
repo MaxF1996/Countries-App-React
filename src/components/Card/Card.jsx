@@ -1,9 +1,11 @@
-import LazyLoad from 'react-lazyload';
-import classes from './Card.module.css';
+import LazyLoad from "react-lazyload";
+import classes from "./Card.module.css";
 
-export default function Card({ data: { flags, name, population, region, capital } }) {
+export default function Card({
+  data: { flags, name, population, region, capital },
+}) {
   const { common: countryName } = name;
-  const formattedPopulation = population.toLocaleString();
+  const formattedPopulation = population.toLocaleString("uk-UA");
 
   return (
     <li className={classes.Card}>
@@ -19,7 +21,7 @@ export default function Card({ data: { flags, name, population, region, capital 
           <b>Region</b>: {region}
         </p>
         <p className={classes.Card__Capital}>
-          <b>Capital</b>: {capital}
+          <b>Capital</b>: {capital || "N/A"}
         </p>
       </div>
     </li>
