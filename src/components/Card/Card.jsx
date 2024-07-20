@@ -6,7 +6,7 @@ export default function Card({
 }) {
   const { common: countryName } = name;
   const formattedPopulation = population.toLocaleString("uk-UA");
-
+  console.log(capital);
   return (
     <li className={classes.Card}>
       <LazyLoad>
@@ -21,7 +21,12 @@ export default function Card({
           <b>Region</b>: {region}
         </p>
         <p className={classes.Card__Capital}>
-          <b>Capital</b>: {capital || "N/A"}
+          <b>Capital</b>:{" "}
+          {!capital
+            ? "N/A"
+            : capital.length === 1
+            ? capital
+            : capital.join(", ")}
         </p>
       </div>
     </li>
