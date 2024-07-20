@@ -1,30 +1,23 @@
-import "normalize.css";
-import "./App.css";
+import { useEffect } from 'react';
+import { useTheme } from './context/ThemeContext';
+import Header from './components/Header/Header';
+import CardsGrid from './components/CardsGrid/CardsGrid';
 
-import { useEffect } from "react";
-import { ThemeProvider, useTheme} from "./context/ThemeContext";
-import Header from "./components/Header/Header";
+import './App.css';
 
-function AppContent() {
+export default function App() {
   const { theme } = useTheme();
-
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-
   return (
     <div className="App">
       <Header />
+      <main className="Main">
+        <div className="Main__Container">
+          <CardsGrid />
+        </div>
+      </main>
     </div>
-  );
-}
-
-export default function App() {
-  return (
-    <>
-      <ThemeProvider>
-        <AppContent />
-      </ThemeProvider>
-    </>
   );
 }

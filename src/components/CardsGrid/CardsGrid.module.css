@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+  .CardsGrid__List {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1079px) {
+  .CardsGrid__List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .CardsGrid__List {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1080px) {
+  .CardsGrid__List {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+.CardsGrid__List {
+  list-style: none;
+  min-height: calc(100vh - 68px);
+  position: relative;
+  padding: 0;
+  margin: 0;
+}

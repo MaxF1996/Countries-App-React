@@ -1,1 +1,37 @@
-
+html {
+    font-family: "Nunito Sans", Arial, sans-serif;
+  }
+  
+  body.light {
+    --main-bg: #f9f9f9;
+    --elements-bg: #ffffff;
+    --font-color: #111517;
+    --input-color: #848484;
+  }
+  body.dark {
+    --main-bg: #202c36;
+    --elements-bg: #2b3845;
+    --font-color: #ffffff;
+    --input-color: #ffffff;
+  }
+  
+  body {
+    background-color: var(--main-bg);
+    color: var(--font-color);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
