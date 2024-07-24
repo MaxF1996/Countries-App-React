@@ -18,6 +18,7 @@
   padding: 20px 20px 30px;
 }
 .Card__Name {
+  font-size: 18px;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -32,6 +33,7 @@
 .Card__Capital {
   margin-top: 0;
   margin-bottom: 10px;
+  line-height: 1.35;
 }
 .Card__Flag {
   border-top-left-radius: 5px;
