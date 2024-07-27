@@ -1,0 +1,27 @@
+.SearchInputContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.SearchInput {
+  min-width: 320px;
+  border: 1px solid var(--font-color);
+  border-radius: 5px;
+
+  font-size: 18px;
+  color: var(--font-color);
+  background-color: var(--elements-bg);
+  padding: 8px 0 8px 40px;
+  outline: none;
+}
+
+.SearchInput::placeholder {
+  color: var(--input-color);
+}
+
+.SearchInput__Icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
