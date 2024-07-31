@@ -20,7 +20,7 @@ export default function Home() {
       if (!storedDate || !isWithin3Days(new Date(storedDate))) {
         try {
           const response = await axios.get(
-            "https://restcountries.com/v3.1/all"
+            "https://restcountries.com/v3.1/all?name,flags,cca3,population,region,capital,subregion,tld,currencies,languages,borders"
           );
           const sortedData = response.data.sort((a, b) =>
             a.name.common.localeCompare(b.name.common)
