@@ -1,5 +1,4 @@
 .CountryPage__BackButton {
-  margin-bottom: 20px;
 }
 
 .CountryDescription {
@@ -7,6 +6,7 @@
   background-color: var(--elements-bg);
   padding: 30px 20px;
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
 }
 @media screen and (min-width: 1200px) {
   .CountryDescription {
@@ -25,6 +25,7 @@
   max-width: 450px;
   margin: 0 auto 40px;
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 @media screen and (min-width: 1200px) {
   .CountryDescription__Flag {
