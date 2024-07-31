@@ -1,12 +1,2 @@
 .App {
 }
-
-.Main {
-  padding-top: 68px;
-}
-
-.Main__Container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 15px;
-}

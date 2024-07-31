@@ -1,0 +1,87 @@
+.CountryPage__BackButton {
+  margin-bottom: 20px;
+}
+
+.CountryDescription {
+  margin-top: 20px;
+  background-color: var(--elements-bg);
+  padding: 30px 20px;
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 1200px) {
+  .CountryDescription {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.CountryDescription__Flag {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  max-width: 450px;
+  margin: 0 auto 40px;
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 1200px) {
+  .CountryDescription__Flag {
+    max-width: 400px;
+    /* box-shadow: unset; */
+    margin: 0;
+  }
+}
+.CountryDescription__Info {
+}
+.CountryDescription__Name {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.CountryDescription__List {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .CountryDescription__List {
+    column-count: 2;
+  }
+}
+.CountryDescription__List li {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+.CountryDescription__NativeName {
+}
+.CountryDescription__Population {
+}
+.CountryDescription__Region {
+}
+.CountryDescription__SubRegion {
+}
+.CountryDescription__Capital {
+}
+.CountryDescription__Domain {
+}
+.CountryDescription__Currencies {
+}
+.CountryDescription__Langs {
+}
+.CountryDescription__BorderCountriesList {
+  padding-left: 0;
+  margin: 0;
+  line-height: 1.4;
+}
+@media screen and (min-width: 1200px) {
+  .CountryDescription__BorderCountriesList {
+    margin-top: 30px;
+  }
+}
+.CountryDescription__BorderCountriesList li {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}

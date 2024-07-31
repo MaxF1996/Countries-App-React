@@ -1,14 +1,15 @@
-import classes from "./Header.module.css"
+import classes from "./Header.module.css";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header className={classes.Header}>
       <div className={classes.Header__Container}>
-        <a href="./index.html" className={classes.Header__Logo}>
+        <Link to="/" className={classes.Header__Logo}>
           Where in the world ?
-        </a>
-        <ThemeSwitcher/>
+        </Link>
+        <ThemeSwitcher />
       </div>
     </header>
   );

@@ -1,8 +1,9 @@
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 import classes from "./Card.module.css";
 
 export default function Card({
-  data: { flags, name, population, region, capital },
+  data: { flags, name, population, region, capital, cca3 },
   renderReason,
 }) {
   const { common: countryName } = name;
@@ -10,18 +11,28 @@ export default function Card({
   return (
     <li className={classes.Card}>
       {renderReason === "search" ? (
-        <img className={classes.Card__Flag} src={flags.svg} alt={countryName} />
-      ) : (
-        <LazyLoad>
+        <Link to={`/country/${cca3.toLowerCase()}`}>
           <img
             className={classes.Card__Flag}
             src={flags.svg}
             alt={countryName}
           />
+        </Link>
+      ) : (
+        <LazyLoad>
+          <Link to={`/country/${cca3.toLowerCase()}`}>
+            <img
+              className={classes.Card__Flag}
+              src={flags.svg}
+              alt={countryName}
+            />
+          </Link>
         </LazyLoad>
       )}
       <div className={classes.Card__Info}>
-        <h2 className={classes.Card__Name}>{countryName}</h2>
+        <h2 className={classes.Card__Name}>
+          <Link to={`/country/${cca3.toLowerCase()}`}>{countryName}</Link>
+        </h2>
         <p className={classes.Card__Population}>
           <b>Population</b>: {formattedPopulation}
         </p>
