@@ -11,7 +11,7 @@ export default function Card({
   return (
     <li className={classes.Card}>
       {renderReason === "search" ? (
-        <Link to={`/country/${cca3.toLowerCase()}`}>
+        <Link to={`/${cca3.toLowerCase()}`}>
           <img
             className={classes.Card__Flag}
             src={flags.svg}
@@ -20,7 +20,7 @@ export default function Card({
         </Link>
       ) : (
         <LazyLoad>
-          <Link to={`/country/${cca3.toLowerCase()}`}>
+          <Link to={`/${cca3.toLowerCase()}`}>
             <img
               className={classes.Card__Flag}
               src={flags.svg}
@@ -31,7 +31,7 @@ export default function Card({
       )}
       <div className={classes.Card__Info}>
         <h2 className={classes.Card__Name}>
-          <Link to={`/country/${cca3.toLowerCase()}`}>{countryName}</Link>
+          <Link to={`/${cca3.toLowerCase()}`}>{countryName}</Link>
         </h2>
         <p className={classes.Card__Population}>
           <b>Population</b>: {formattedPopulation}

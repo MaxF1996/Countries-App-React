@@ -1,6 +1,6 @@
 import Home from "./pages/Home/Home";
 import CountryPage from "./pages/CountryPage/CountryPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useTheme } from "./context/ThemeContext";
 import { useEffect } from "react";
 
@@ -10,13 +10,11 @@ export default function App() {
     document.body.className = theme;
   }, [theme]);
   return (
-    <BrowserRouter basename="/countries-app-react/">
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-        </Route>
-        <Route path="/country/:cca3" element={<CountryPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/:cca3" element={<CountryPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
